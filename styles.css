@@ -4,8 +4,43 @@
   box-sizing: border-box;
 }
 
-.flex   { display: flex; }
-.row    { flex-direction: row; }
-.col    { flex-direction: column; }
-.center { justify-content: center; align-items: center; }
+.creator  { text-decoration: line-through; text-decoration-thickness: 0.25rem; }
+
+.flex     { display: flex; }
+.row      { flex-direction: row; }
+.col      { flex-direction: column; }
+.center   { justify-content: center; align-items: center; }
+
+.banner {
+  margin-left: 20vh;
+  padding: 20vh 0 2.5vh;
+
+  height: 100vh;
+  width: 50vh;
+
+  background: url("./images/leaves_img.jpg") center / cover;
+
+  justify-content: space-between;
+  align-items: center;
+}
+
+.banner h1 {
+  width: 100%;
+  aspect-ratio: 3;
+
+  text-align: center;
+  font-size: 3rem;
+  color: white;
+
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.banner p, .banner a {
+  color: white;
+}
+
+.banner a:hover {
+  color: rgb(200, 200, 200);
+  text-shadow: 0.05rem 0.05rem 0.1rem rgb(200, 200, 200);
+}
 
