@@ -4,12 +4,10 @@
   box-sizing: border-box;
 }
 
-.creator  { text-decoration: line-through; text-decoration-thickness: 0.25rem; }
-
-.flex     { display: flex; }
-.row      { flex-direction: row; }
-.col      { flex-direction: column; }
-.center   { justify-content: center; align-items: center; }
+.flex           { display: flex; }
+.row            { flex-direction: row; }
+.col            { flex-direction: column; }
+.center         { justify-content: center; align-items: center; }
 
 .banner {
   margin-left: 20vh;
@@ -35,11 +33,20 @@
   background-color: rgba(0, 0, 0, 0.6);
 }
 
+.creator {
+  text-decoration: line-through;
+  text-decoration-thickness: 0.25rem;
+}
+
+.creator:hover {
+  text-shadow: 0.05rem 0.05rem 1rem gold;
+}
+
 .banner footer, .banner a {
   color: white;
 }
 
-.banner a:hover {
+.banner > footer > a:hover {
   color: rgb(200, 200, 200);
   text-shadow: 0.05rem 0.05rem 0.1rem rgb(200, 200, 200);
 }
