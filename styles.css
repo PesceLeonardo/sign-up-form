@@ -3,18 +3,25 @@
   padding: 0;
   box-sizing: border-box;
 }
+/* *:not(plasmo-csui) {
+  border: 2px solid red;
+} */
 
 .flex           { display: flex; }
 .row            { flex-direction: row; }
 .col            { flex-direction: column; }
 .center         { justify-content: center; align-items: center; }
 
+body {
+  padding: 0 20vmin;
+  background-color: white;
+}
+
 .banner {
-  margin-left: 20vh;
-  padding: 20vh 0 2.5vh;
+  padding: 20vmin 0 2.5vmin;
 
   height: 100vh;
-  width: 50vh;
+  aspect-ratio: 0.4;
 
   background: url("./images/leaves_img.jpg") center / cover;
 
@@ -51,3 +58,67 @@
   text-shadow: 0.05rem 0.05rem 0.1rem rgb(200, 200, 200);
 }
 
+main {
+  flex: 1;
+  background-color: rgb(240, 240, 240);
+}
+
+main > form {
+  margin: 4vh 0;
+  padding: 2vh 4vh;
+
+  width: 100%;
+  height: 40vh;
+
+  background-color: white;
+  box-shadow: 0 8px 8px -6px rgb(120, 120, 120);
+}
+
+main > form > section {
+  margin: auto;
+  flex-wrap: wrap;
+  gap: 3vmin;
+}
+
+main > form div {
+  flex: 0 0 40%;
+  height: clamp(32px, 5vh, 64px);
+}
+
+main > form div input {
+  width: 100%;
+  height: 100%;
+}
+
+/* FLOAT LABELS */
+
+form > section > div { position: relative; }
+
+form > section > div > label {
+  position: absolute;
+  bottom: 20%;
+  left: 1%;
+
+  color: rgb(120, 120, 120);
+  font-size: 1.2rem;
+  font-family: monospace;
+}
+
+input {
+  padding: 0.25rem;
+  font-size: 1.2rem;
+}
+
+input:focus + label {
+  color: black;
+  font-family: Arial, Helvetica, sans-serif;
+  top: -1.5rem;
+}
+
+input:valid {
+  background-color: white;
+
+  + label {
+    display: none;
+  }
+}

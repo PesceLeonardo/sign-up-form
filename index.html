@@ -8,12 +8,12 @@
     <title>Sign-Up Form</title>
   </head>
 
-  <body>
+  <body class="flex row">
     <!--Banner image-->
     <aside class="banner flex col">
 
       <!--Page title-->
-      <h1 class="flex center">Tech <a href="https://github.com/PesceLeonardo" class="creator">&ltT.F.L.&gt</a></h1>
+      <h1 class="flex center">Tech&nbsp<a href="https://github.com/PesceLeonardo" class="creator">&ltT.F.L.&gt</a></h1>
 
       <!--Copyright-->
       <footer>Copyright @ Photo by <a href="https://unsplash.com/@haliewestphoto">Halie West</a> on <a
@@ -21,22 +21,63 @@
     </aside>
 
     <!--Main content-->
-    <main>
+    <main class="flex col center">
 
       <!--Description in various <p> tags-->
-      <section>
+      <section class="flex col center">
+        <p role="alert" aria-live="assertive">WARNING: This is <strong>NOT</strong> a real online service!</p>
+        <p>Join the world of Tech &ltT.F.L.&gt to get all the benefits of the best technology of the market.</p>
+        <p>You know you want it. You know you need it.</p>
       </section>
 
-      <form action="#" method="post">
+      <form class="flex center" id="form" action="#" method="post">
 
         <!--Main inputs (name, last name, etc...)-->
-        <section>
-        </section>
+        <section class="flex row center">
 
-        <!--Sign up, sign in-->
-        <section>
+          <div>
+            <input type="text" id="first-name" name="first-name" required autocomplete="given-name"
+              autocapitalize="words">
+            <label for="first-name">First name</label>
+          </div>
+
+          <div>
+            <input type="text" id="last-name" name="last-name" required autocomplete="family-name"
+              autocapitalize="words">
+            <label for="last-name">Last name</label>
+          </div>
+
+          <div>
+            <input type="email" id="email" name="user-email" required autocomplete="email" autocapitalize="none">
+            <label for="user-email">Email</label>
+          </div>
+
+          <div>
+            <input type="tel" id="phone-number" name="phone-number" required autocomplete="tel" autocapitalize="none">
+            <label for="phone-number">Phone number</label>
+          </div>
+
+          <div>
+            <input type="password" id="user-password" name="user-password" required autocomplete="new-password"
+              autocapitalize="none" minlength="8" maxlength="20"
+              pattern="^(?=.*\d+)(?=.*[a-z]+)(?=.*[A-Z]+)(?=.*[!?\-_;:,.]+).+$">
+            <label for="user-password">Password</label>
+          </div>
+
+          <div>
+            <input type="password" id="confirm-password" name="confirm-password" required autocapitalize="none"
+              minlength="8" maxlength="20" pattern="^(?=.*\d+)(?=.*[a-z]+)(?=.*[A-Z]+)(?=.*[!?\-_;:,.]+).+$">
+            <label for="confirm-password">Confirm password</label>
         </section>
+        </div>
+
       </form>
+
+      <!--Sign up, sign in-->
+      <section>
+        <button form="form">Sign up!</button>
+        <p>Already a member? <button form="form">Sign in!</button></p>
+      </section>
     </main>
 
     <script src="./script.js"></script>
