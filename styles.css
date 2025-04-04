@@ -3,122 +3,23 @@
   padding: 0;
   box-sizing: border-box;
 }
-/* *:not(plasmo-csui) {
-  border: 2px solid red;
-} */
+
+:root {
+  --hover-link: rgb(200, 200, 200);
+}
 
 .flex           { display: flex; }
-.row            { flex-direction: row; }
 .col            { flex-direction: column; }
 .center         { justify-content: center; align-items: center; }
+.glow:hover     { text-shadow: 0 0 1rem gold; color: var(--hover-link); }
 
-body {
-  padding: 0 20vmin;
-  background-color: white;
+a               { text-decoration: none; color: inherit; }
+
+.top-banner,
+.bottom-banner  { display: none; }
+
+@media screen and (max-width: 400px) {
+  .side-banner                { display: none; }
+  .top-banner, .bottom-banner { display: flex; }
 }
 
-.banner {
-  padding: 20vmin 0 2.5vmin;
-
-  height: 100vh;
-  aspect-ratio: 0.4;
-
-  background: url("./images/leaves_img.jpg") center / cover;
-
-  justify-content: space-between;
-  align-items: center;
-}
-
-.banner h1 {
-  width: 100%;
-  aspect-ratio: 3;
-
-  text-align: center;
-  font-size: 3rem;
-  color: white;
-
-  background-color: rgba(0, 0, 0, 0.6);
-}
-
-.creator {
-  text-decoration: line-through;
-  text-decoration-thickness: 0.25rem;
-}
-
-.creator:hover {
-  text-shadow: 0.05rem 0.05rem 1rem gold;
-}
-
-.banner footer, .banner a {
-  color: white;
-}
-
-.banner > footer > a:hover {
-  color: rgb(200, 200, 200);
-  text-shadow: 0.05rem 0.05rem 0.1rem rgb(200, 200, 200);
-}
-
-main {
-  flex: 1;
-  background-color: rgb(240, 240, 240);
-}
-
-main > form {
-  margin: 4vh 0;
-  padding: 2vh 4vh;
-
-  width: 100%;
-  height: 40vh;
-
-  background-color: white;
-  box-shadow: 0 8px 8px -6px rgb(120, 120, 120);
-}
-
-main > form > section {
-  margin: auto;
-  flex-wrap: wrap;
-  gap: 3vmin;
-}
-
-main > form div {
-  flex: 0 0 40%;
-  height: clamp(32px, 5vh, 64px);
-}
-
-main > form div input {
-  width: 100%;
-  height: 100%;
-}
-
-/* FLOAT LABELS */
-
-form > section > div { position: relative; }
-
-form > section > div > label {
-  position: absolute;
-  bottom: 20%;
-  left: 1%;
-
-  color: rgb(120, 120, 120);
-  font-size: 1.2rem;
-  font-family: monospace;
-}
-
-input {
-  padding: 0.25rem;
-  font-size: 1.2rem;
-}
-
-input:focus + label {
-  color: black;
-  font-family: Arial, Helvetica, sans-serif;
-  top: -1.5rem;
-}
-
-input:valid {
-  background-color: white;
-
-  + label {
-    display: none;
-  }
-}
