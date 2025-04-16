@@ -10,74 +10,95 @@
 
   <body class="flex center">
     <!-- Banner -->
-    <header class="side-banner">
+    <header class="side banner flex col center">
       <!-- Title -->
-      <h1><span class="glow"><a href="https://github.com/pesceleonardo" target="_blank">&ltT.F.L.&gt</a></span> Tech
+      <h1 class="flex center"><span class="glow"><a href="https://github.com/pesceleonardo"
+            target="_blank">&ltT.F.L.&gt</a></span> Tech
       </h1>
       <!-- Copyright -->
-      <p></p>
+      <footer>Copyright @ Photo by <a href="https://unsplash.com/@haliewestphoto">&nbspHalie West&nbsp</a> on <a
+          href="https://unsplash.com">&nbspUnsplash</a></footer>
     </header>
 
     <!-- Main Content -->
-    <main>
+    <main class="flex col">
 
-      <header class="top-banner"></header>
+      <header class="top banner flex center">
+        <h1 class="flex center"><span class="glow"><a href="https://github.com/pesceleonardo"
+              target="_blank">&ltT.F.L.&gt</a></span> Tech
+        </h1>
+      </header>
 
-      <!-- Warning -->
-      <p></p>
-      <!-- Description -->
-      <p></p>
-      <!-- Catchy Hookup -->
-      <p></p>
+      <section class="text flex col center">
+        <!-- Warning -->
+        <p role="alert" aria-live="assertive">WARNING: This is <strong>NOT</strong> a real online service!</p>
+        <!-- Description -->
+        <p>Join the world of Tech <span class="glow">&ltT.F.L.&gt</span> to get all the benefits of the best
+          technology of the market.</p>
+        <!-- Catchy Hookup -->
+        <p class="last-text">You know you <em>want</em> it. You know you <strong>need</strong> it.</p>
+      </section>
 
-      <form action="">
+      <form action="#" method="post">
 
         <!-- Input Field -->
-        <section>
+        <section class="input-field flex center">
 
-          <div>
-            <input type="text">
-            <label for=""></label>
+          <div class="wrapper">
+            <div>
+              <label for="user-first-name">FIRST NAME:
+                <input type="text" id="user-first-name" name="user-first-name" required autocapitalize="words"
+                  autocomplete="given-name">
+              </label>
+            </div>
+            <div>
+              <label for="user-email">EMAIL:
+                <input type="email" id="user-email" name="user-email" required autocomplete="email">
+              </label>
+            </div>
+            <div>
+              <label for="user-password">PASSWORD:
+                <input type="password" id="user-password" name="user-password" required autocomplete="new-password">
+              </label>
+            </div>
           </div>
 
-          <div>
-            <input type="text">
-            <label for=""></label>
-          </div>
-
-          <div>
-            <input type="text">
-            <label for=""></label>
-          </div>
-
-          <div>
-            <input type="text">
-            <label for=""></label>
-          </div>
-
-          <div>
-            <input type="text">
-            <label for=""></label>
-          </div>
-
-          <div>
-            <input type="text">
-            <label for=""></label>
+          <div class="wrapper">
+            <div>
+              <label for="user-last-name">LAST NAME:
+                <input type="text" id="user-last-name" name="user-last-name" required autocapitalize="words"
+                  autocomplete="family-name">
+              </label>
+            </div>
+            <div>
+              <label for="user-phone-number">CELLPHONE:
+                <input type="tel" id="user-phone-number" name="user-phone-number" required>
+              </label>
+            </div>
+            <div>
+              <label for="confirm-password">CONFIRM PASSWORD:
+                <input type="password" id="confirm-password" name="confirm-password" required>
+              </label>
+            </div>
           </div>
 
         </section>
 
-        <!-- Sign Up -->
-        <button></button>
+        <section class="button-field flex col center">
+          <!-- Sign Up -->
+          <button class="sign-up" type="submit">Sign-Up!</button>
 
-        <!-- Sign In -->
-        <p><button></button></p>
+          <!-- Sign In -->
+          <p class="sign-in">Already a member? Click here to <button class="inline" type="button">sign-in</button>!</p>
+
+        </section>
 
       </form>
 
     </main>
 
-    <footer class="bottom-banner"></footer>
+    <footer class="bottom flex center">Copyright @ Photo by<a href="https://unsplash.com/@haliewestphoto">&nbspHalie
+        West&nbsp</a> on <a href="https://unsplash.com">&nbspUnsplash</a></footer>
 
     <script src="./script.js"></script>
     <noscript>
